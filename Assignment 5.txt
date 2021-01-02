@@ -1,0 +1,14 @@
+Insertion Sort Function :
+
+void Insertion_Sort(int arr[],int n){
+	int value,pos;
+	for(int i=1;i<n;i++){
+		value=arr[i];
+		pos=i;
+		while(pos>0 && arr[pos-1]>value){
+			arr[pos]=a[pos-1];
+			pos=pos-1;
+		}
+		arr[pos]=value;
+	}
+}
