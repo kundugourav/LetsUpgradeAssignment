@@ -1,0 +1,15 @@
+Question 3 : Write a function "delete_end()" for deleting a node from the end of the linked list.
+
+Ans :
+
+node *delete_end(node *head){
+	node *cur=head;
+	node *prev=head;
+	while(cur->next!=NULL){
+		prev=cur;
+		cur=cur->next;
+	}
+	prev->next=NULL;
+	free(cur);
+	return head;
+}

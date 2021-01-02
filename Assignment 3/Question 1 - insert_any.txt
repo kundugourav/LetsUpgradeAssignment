@@ -1,0 +1,26 @@
+Question 1 : Write a function “insert_any()” for inserting a node at any given position of the linked list. Assume
+position starts at 0.
+
+Ans :
+
+node *insert_any(node *head){
+	int pos;
+	printf("enter position of new node : ");
+	scanf("%d",&pos);
+	node *new = create(x);
+	node *cur=head;
+	node *prev=head;
+	if(pos==1){
+		new->next=head;
+		head=new;
+	}
+	else{
+		for(int i=1;i<pos;i++){
+			prev=cur;
+			cur=cur->next;
+		}
+		prev->next=new;
+		new->next=cur;
+	}
+	return head;
+}

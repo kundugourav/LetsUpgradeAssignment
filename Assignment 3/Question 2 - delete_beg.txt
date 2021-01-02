@@ -1,0 +1,10 @@
+Question 2 : Write a function "delete_beg()" for deleting a node from the beginning of the linked list.
+
+Ans :
+
+node *delete_beg(node *head){
+	node *temp = head;
+	head = head->next;
+	free(temp);
+	return head;
+}
