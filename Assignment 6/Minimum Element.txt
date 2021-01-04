@@ -1,0 +1,17 @@
+int find_min(int stack[],int top){
+	int minimum[10],min_num=0,min_top=-1,val;
+	while(top!=-1){
+		val=stack[top--];
+		if(min_num==0){
+			min_num=val;
+		}
+		else if(min_num>val){
+			min_num=val;
+		}
+		minimum[++min_top]=val;
+	}
+	while(min_top!=-1){
+		val=minimum[min_top--];
+		stack[++top]=val;
+	}
+}

@@ -1,0 +1,17 @@
+int find_max(int stack[],int top){
+	int maximum[10],max_num=0,max_top=-1,val;
+	while(top!=-1){
+		val=stack[top--];
+		if(max_num==0){
+			max_num=val;
+		}
+		else if(max_num<val){
+			max_num=val;
+		}
+		maximum[++max_top]=val;
+	}
+	while(max_top!=-1){
+		val=maximum[max_top--];
+		stack[++top]=val;
+	}
+}
